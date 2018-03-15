@@ -15,5 +15,7 @@
         <mapping class="com.entity.Employee"></mapping>
         <mapping class="com.entity.Branch"></mapping>
         <mapping class="com.entity.Address"></mapping>
+        <mapping class="com.manytomany.Person"></mapping>
+        <mapping class="com.manytomany.Language"></mapping>
     </session-factory>
 </hibernate-configuration>

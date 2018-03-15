@@ -26,6 +26,8 @@ public class Branch {
 	
 	private String name;
 	
+	private String type;
+	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "branch", cascade=CascadeType.ALL)
 	private Set<Employee> employees = new HashSet<Employee>();
 	

@@ -1,6 +1,8 @@
 package com.client;
 
 
+import java.io.Serializable;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -17,7 +19,7 @@ public class AppClient {
 	 
 	 public static void main(String[] a){
 		 buildSessionFactory();
-		 //createEmployee();
+		// createEmployee();
 		 
 		 //getEmployee();
 		// createBranch();
@@ -50,9 +52,15 @@ public class AppClient {
 	private static void createEmployee() {
 		Session session = sessionFactory.openSession();
 		 Employee emp = new Employee();
-		 emp.setName("Rajll");
+		 emp.setName("Vivek1");
+		 
+		 Branch b = new Branch();
+		 b.setId(2);
+		 emp.setBranch(b);
 		 Transaction tx = session.beginTransaction();
-		 session.save(emp);
+		 session.persist(emp);
+		 emp.setName("abc");
+		 //System.out.println("id "+id);
 		 tx.commit();
 		 session.close();
 	}
@@ -119,12 +127,18 @@ public class AppClient {
 
 		Branch b = new Branch();
 		b.setBranchId(2);
-		//b.setName("New");
+		b.setName("New1");
+		
 		Branch b1 = (Branch) session.get(Branch.class, new Long(2));
- 		session.merge(b);
+		System.out.println(b1);
+ 		b1.setName("xyz12");
+ 		Branch ob = (Branch) session.merge(b);
 		 //session.save(emp);
 		 tx.commit();
 		 session.close();
+		 System.out.println(b1.getName());
+		 System.out.println(b);		 
+		 System.out.println(ob);
 	}
 
     private static SessionFactory buildSessionFactory() {
