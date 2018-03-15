@@ -27,9 +27,9 @@ public class Language {
 	
 	String lname;
 	
-	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	//@JoinTable(name = "person_language", joinColumns = {@JoinColumn(name = "LANGUAGE_ID") },inverseJoinColumns = { @JoinColumn(name = "PERSON_ID"
-	//		) })
+	@ManyToMany(fetch = FetchType.LAZY,cascade=CascadeType.ALL)
+	@JoinTable(name = "p_l", joinColumns = {@JoinColumn(name = "LANGUAGE_ID") },inverseJoinColumns = { @JoinColumn(name = "PERSON_ID"
+			) })
 	Set<Person> persons = new HashSet<Person>();
 
 	public long getLid() {

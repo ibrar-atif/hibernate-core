@@ -17,23 +17,23 @@ public class Client {
 	
 	public static void main(String a[]){
 		buildSessionFactory();
-		PersonCreated();
+		//PersonCreated();
 		//getPerson();
 		//getLanguge();
 		
-		//createLanguage();
+		createLanguage();
 		
 		
 	}
 	
 	public static void PersonCreated(){
 		Person p = new Person();
-		p.setPname("Person1");
+		p.setPname("vivek");
 		
 		Language l1 = new Language();
-		l1.setLname("hindi");
+		l1.setLname("hindi11");
 		Language l2 = new Language();
-		l2.setLname("english");
+		l2.setLname("english11");
 		
 		Set<Language> set = new HashSet<Language>();
 		set.add(l1);
@@ -84,15 +84,15 @@ public static void getLanguge(){
 
 public static void createLanguage(){
 	Person p = new Person();
-	p.setPname("Person33");
+	p.setPname("sam");
 	
 	Person p2 = new Person();
-	p2.setPname("Person44");
+	p2.setPname("rajiv");
 	
 	
 	
 	Language l1 = new Language();
-	l1.setLname("Marathi1");
+	l1.setLname("dutch");
 		
 	Set<Person> set = new HashSet<Person>();
 	set.add(p);
