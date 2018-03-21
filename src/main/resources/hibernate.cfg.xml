@@ -17,5 +17,14 @@
         <mapping class="com.entity.Address"></mapping>
         <mapping class="com.manytomany.Person"></mapping>
         <mapping class="com.manytomany.Language"></mapping>
+        <mapping class="com.inheritence.tpch.Worker"></mapping>
+        <mapping class="com.inheritence.tpch.Developer"></mapping>
+        <mapping class="com.inheritence.tpcc.Animal"></mapping>
+        <mapping class="com.inheritence.tpcc.Dog"></mapping>
+        <mapping class="com.inheritence.tpcc.Camel"></mapping>
+        <mapping class="com.inheritence.tpsc.Job"></mapping>
+        <mapping class="com.inheritence.tpsc.Permanent"></mapping>
+        <mapping class="com.inheritence.tpsc.Contract"></mapping>
+      
     </session-factory>
 </hibernate-configuration>
